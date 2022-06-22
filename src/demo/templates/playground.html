@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+{% block main %}
+
+<div>
+    <form method="post" id="input_form">
+
+        <div class="form-outline w-50">
+        <input type="text" name="user_input" id="user_input" class="form-control" />
+        <label class="form-label" for="user_input">Enter data to display</label>
+        </div>
+    
+        <button type="submit" form="input_form" class="btn btn-primary btn-block w-25">Submit</button>
+
+    </form>
+</div>
+
+<br>
+
+<h1>
+    Currently set as: {{ name }}
+</h1>
+
+{% endblock %}

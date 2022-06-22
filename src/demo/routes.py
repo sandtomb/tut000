@@ -12,8 +12,7 @@ def index():
 @app.route('/playground', methods=['GET', 'POST'])
 def playground():
     if request.method == 'POST':
-        # user_input = fill this in
-        name = session['name']
+        name = request.form['user_input']
         return render_template('playground.html', title='Playground page', name=name)
     else:
         try:
